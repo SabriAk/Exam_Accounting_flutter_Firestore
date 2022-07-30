@@ -37,7 +37,7 @@ class _financelistState extends State<financelist> {
               Navigator.pushReplacement(
                   context, MaterialPageRoute(builder: (_) => Iskele()));
             },
-            child: Text("Back"),
+            child: Text("Back Start Menu"),
           ),
           MaterialButton(
             onPressed: () {
@@ -86,6 +86,9 @@ class _financelistState extends State<financelist> {
                         label: Text('Time'),
                       ),
                       new DataColumn(
+                        label: Text('Edit'),
+                      ),
+                      new DataColumn(
                         label: Text('Delete'),
                       ),
                     ],
@@ -124,17 +127,7 @@ List<DataRow> _createRows(QuerySnapshot snapshot, context) {
           color: Colors.blue,
         ),
       )),
-      DataCell(IconButton(
-        onPressed: () {
-          print("add_money button is ok");
-          Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (_) => finance()));
-        },
-        icon: Icon(
-          Icons.account_tree_sharp,
-          color: Color.fromARGB(255, 35, 240, 8),
-        ),
-      )),
+
       // ignore: prefer_const_constructors
       DataCell(
         IconButton(
